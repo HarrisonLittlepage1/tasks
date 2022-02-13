@@ -19,7 +19,7 @@ function App(): JSX.Element {
             Best fast food mexican:
             <ul>
                 <li>Moes</li>
-                <li>Q'doba</li>
+                <li>Qdoba</li>
                 <li>Chipotle</li>
             </ul>
             <p>
