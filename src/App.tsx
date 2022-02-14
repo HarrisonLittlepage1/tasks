@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import "./App.css";
 
 function App(): JSX.Element {
@@ -15,6 +15,20 @@ function App(): JSX.Element {
                 <Button onClick={() => console.log("Hello World!")}>
                     Log Hello World
                 </Button>
+                <Container>
+                    <Row>
+                        <Col>
+                            <div className="App-first-col">
+                                column and rectangle one
+                            </div>
+                        </Col>
+                        <Col>
+                            <div className="App-second-col">
+                                column and rectangle two
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
             </header>
             Best fast food mexican:
             <ul>

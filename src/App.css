@@ -12,7 +12,17 @@
         animation: App-logo-spin infinite 20s linear;
     }
 }
+.App-first-col {
+    width: 300px;
+    height: 80px;
+    background-color:red;
+}
+.App-second-col {
+    width:300px;
+    height:80px;
+    background-color: red;
 
+}
 .App-header {
     width: 100%;
     background-color: #e7bf68;
