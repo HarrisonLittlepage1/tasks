@@ -19,7 +19,7 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    const tripled = numbers.map((x: number): number => x * 2);
+    const tripled = numbers.map((x: number): number => x * 3);
     return tripled;
 }
 
