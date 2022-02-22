@@ -96,6 +96,9 @@ export function makeMath(addends: number[]): string {
     let big = 0;
     const bigsum = addends.map((addend: number): number => (big += addend));
     const represent = addends.join("+");
+    if (addends.length === 0) {
+        return "0=0";
+    }
 
     return big.toString() + "=" + represent;
 }
