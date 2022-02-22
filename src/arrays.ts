@@ -95,9 +95,9 @@ export function allRGB(colors: string[]): boolean {
 export function makeMath(addends: number[]): string {
     let big = 0;
     const bigsum = addends.map((addend: number): number => (big += addend));
-    const represent = addends.join(" + ");
+    const represent = addends.join("+");
 
-    return bigsum.toString() + "=" + represent;
+    return big.toString() + "=" + represent;
 }
 
 /**
