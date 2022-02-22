@@ -59,7 +59,9 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
     const shout = messages.map((message: string): string =>
         message.endsWith("!") ? message.toUpperCase() : message
     );
-    const dumbquestions = shout.filter((x: string): boolean => x.endsWith("?"));
+    const dumbquestions = shout.filter(
+        (x: string): boolean => !x.endsWith("?")
+    );
     return dumbquestions;
 };
 
@@ -112,6 +114,7 @@ export function makeMath(addends: number[]): string {
  * For instance, the array [1, 9, -5, 7] would become [1, 9, -5, 10, 7]
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
+/** 
 export function injectPositive(values: number[]): number[] {
     let sum = 0;
     let copyvalues = [...values];
@@ -123,6 +126,36 @@ export function injectPositive(values: number[]): number[] {
                 : (sum += value)
         );
         return inject;
+    } else {
+        const noNegatives = copyvalues.map(
+            (value: number): number => (sum += value)
+        );
+        copyvalues = [...copyvalues, sum];
+        return copyvalues;
+    }
+}
+*/
+export function injectPositive(values: number[]): number[] {
+    let copyvalues = [...values];
+    const initialValue = 0;
+    let sum = 0;
+    const anyNegatives = copyvalues.some((value: number): boolean => value < 0);
+    if (anyNegatives) {
+        const index = copyvalues.findIndex(
+            (value: number): boolean => value < 0
+        );
+        copyvalues.splice(
+            index + 1,
+            0,
+            copyvalues
+                .slice(0, index)
+                .reduce(
+                    (previousValue, currentValue) =>
+                        previousValue + currentValue,
+                    initialValue
+                )
+        );
+        return copyvalues;
     } else {
         const noNegatives = copyvalues.map(
             (value: number): number => (sum += value)
