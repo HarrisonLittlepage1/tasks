@@ -114,19 +114,20 @@ export function makeMath(addends: number[]): string {
  */
 export function injectPositive(values: number[]): number[] {
     let sum = 0;
-    const anyNegatiges = values.some((value: number): boolean => value < 0);
+    let copyvalues = [...values];
+    const anyNegatiges = copyvalues.some((value: number): boolean => value < 0);
     if (anyNegatiges) {
-        const inject = values.map((value: number): number =>
+        const inject = copyvalues.map((value: number): number =>
             value < 0
-                ? (values[values.indexOf(value) + 1] = sum)
+                ? (copyvalues.splice(copyvalues.indexOf(value) + 1), 0, sum)
                 : (sum += value)
         );
         return inject;
     } else {
-        const noNegatives = values.map(
+        const noNegatives = copyvalues.map(
             (value: number): number => (sum += value)
         );
-        values = [...values, sum];
-        return values;
+        copyvalues = [...copyvalues, sum];
+        return copyvalues;
     }
 }
