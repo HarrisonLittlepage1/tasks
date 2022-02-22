@@ -16,7 +16,7 @@ export function bookEndList(numbers: number[]): number[] {
 
 /**
  * Consume an array of numbers, and return a new array where each
- * number has been tripled (multiplied by 3).
+ * number has been tripled (multiplied by 3). tacos
  */
 export function tripleNumbers(numbers: number[]): number[] {
     const tripled = numbers.map((x: number): number => x * 3);
