@@ -96,7 +96,7 @@ export function allRGB(colors: string[]): boolean {
  */
 export function makeMath(addends: number[]): string {
     let big = 0;
-    const bigsum = addends.map((addend: number): number => (big += addend));
+    addends.map((addend: number): number => (big += addend));
     const represent = addends.join("+");
     if (addends.length === 0) {
         return "0=0";
@@ -157,9 +157,7 @@ export function injectPositive(values: number[]): number[] {
         );
         return copyvalues;
     } else {
-        const noNegatives = copyvalues.map(
-            (value: number): number => (sum += value)
-        );
+        copyvalues.map((value: number): number => (sum += value));
         copyvalues = [...copyvalues, sum];
         return copyvalues;
     }
