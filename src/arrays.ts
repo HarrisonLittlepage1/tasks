@@ -16,7 +16,7 @@ export function bookEndList(numbers: number[]): number[] {
 
 /**
  * Consume an array of numbers, and return a new array where each
- * number has been tripled (multiplied by 3). tacos
+ * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
     const tripled = numbers.map((x: number): number => x * 3);
@@ -96,7 +96,7 @@ export function allRGB(colors: string[]): boolean {
  */
 export function makeMath(addends: number[]): string {
     let big = 0;
-    addends.map((addend: number): number => (big += addend));
+    const bigsum = addends.map((addend: number): number => (big += addend));
     const represent = addends.join("+");
     if (addends.length === 0) {
         return "0=0";
@@ -157,7 +157,9 @@ export function injectPositive(values: number[]): number[] {
         );
         return copyvalues;
     } else {
-        copyvalues.map((value: number): number => (sum += value));
+        const noNegatives = copyvalues.map(
+            (value: number): number => (sum += value)
+        );
         copyvalues = [...copyvalues, sum];
         return copyvalues;
     }
