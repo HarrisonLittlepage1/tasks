@@ -1,4 +1,3 @@
-import { ModalBody } from "react-bootstrap";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
