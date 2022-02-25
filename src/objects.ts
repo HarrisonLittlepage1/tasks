@@ -40,6 +40,13 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
+    if (question.type === "short_answer_question") {
+        if (answer.length != 0) {
+            return true;
+        } else return false;
+    } else if (question.type === "multiple_choice_question") {
+        return question.options.includes(answer);
+    }
     return false;
 }
 
