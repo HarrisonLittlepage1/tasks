@@ -36,18 +36,6 @@ function App(): JSX.Element {
                     </Row>
                 </Container>
             </header>
-<<<<<<< HEAD
-            Best fast food mexican:
-            <ul>
-                <li>Moes</li>
-                <li>Qdoba</li>
-                <li>Chipotle</li>
-            </ul>
-            <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
-            </p>
-=======
             <hr></hr>
             <Counter></Counter>
             <hr />
@@ -60,7 +48,6 @@ function App(): JSX.Element {
             <ChangeType></ChangeType>
             <hr />
             <CycleHoliday></CycleHoliday>
->>>>>>> upstream/task-state
         </div>
     );
 }
