@@ -68,15 +68,15 @@ function App(): JSX.Element {
             <hr />
             <ChangeColor></ChangeColor>
             <hr />
-            <CheckAnswer expectedAnswer={""}></CheckAnswer>
+            <CheckAnswer expectedAnswer={"John Adams"}></CheckAnswer>
             <hr />
             <EditMode></EditMode>
             <hr />
             <GiveAttempts></GiveAttempts>
             <hr />
             <MultipleChoiceQuestion
-                options={[]}
-                expectedAnswer={""}
+                options={["True", "False"]}
+                expectedAnswer={"True"}
             ></MultipleChoiceQuestion>
         </div>
     );
