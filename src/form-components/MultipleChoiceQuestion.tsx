@@ -16,6 +16,7 @@ export function MultipleChoiceQuestion({
         <div>
             <h3>Multiple Choice Question</h3>
             <Form.Group controlId="checkAnswer">
+                <Form.Label>True or False</Form.Label>
                 <Form.Select value={choice} onChange={updateChoice}>
                     {options.map((option: string) => (
                         <option key={option} value={option}>

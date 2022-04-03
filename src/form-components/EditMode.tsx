@@ -57,7 +57,6 @@ export function EditMode(): JSX.Element {
                     </div>
                 </div>
             </div>
-            );
         </div>
     );
 }
