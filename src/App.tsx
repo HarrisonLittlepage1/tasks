@@ -65,6 +65,19 @@ function App(): JSX.Element {
             <ChangeType></ChangeType>
             <hr />
             <CycleHoliday></CycleHoliday>
+            <hr />
+            <ChangeColor></ChangeColor>
+            <hr />
+            <CheckAnswer expectedAnswer={""}></CheckAnswer>
+            <hr />
+            <EditMode></EditMode>
+            <hr />
+            <GiveAttempts></GiveAttempts>
+            <hr />
+            <MultipleChoiceQuestion
+                options={[]}
+                expectedAnswer={""}
+            ></MultipleChoiceQuestion>
         </div>
     );
 }
